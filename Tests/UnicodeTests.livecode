@@ -1,5 +1,7 @@
 script "UnicodeTests"
 
+# This test script implements The Unicode Out Of The Boxt Tests in LiveCode
+
 #locals
 local tCodepoint
 local tDecomposed
@@ -8,11 +10,11 @@ local tUnicodeString
 
 # helper functions
 function reversed pString
-    local tReversedString = ""
-    repeat with tChar = the length of pString down to 1
-      put char tChar of pString & return
-    end repeat
-    return tReversedString
+  local tReversedString = ""
+  repeat with tChar = the length of pString down to 1
+    put char tChar of pString after tReversedString
+  end repeat
+  return tReversedString
 end reversed
 
 on libraryStack
@@ -30,7 +32,7 @@ on libraryStack
   put numToCodepoint(0xE7) into tPrecomposed
   put  "c" & numToCodepoint(0x0327) into tDecomposed
   set the formSensitive to true
-  MT.assertTrue tPrecomposed <> tDecomposed
+  MT.assert tPrecomposed <> tDecomposed
   set the formSensitive to false
   MT.endTest
    

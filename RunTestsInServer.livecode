@@ -9,8 +9,8 @@ end if
 start using stack "../LiveCode-MiniTest/MiniTest.livecode"
 
 MT.startTestRun
-# start using stack "Tests/UnicodeTests.livecode"
-# stop using stack "UnicodeTests"
+start using stack "Tests/UnicodeTests.livecode"
+stop using stack "UnicodeTests"
 start using stack "Tests/ChunkingTests.livecode"
 stop using stack "ChunkingTests"
 start using stack "Tests/RegExTests.livecode"
