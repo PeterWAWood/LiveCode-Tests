@@ -1,4 +1,4 @@
-script "RegExTests"
+﻿script "RegExTests"
 
 on libraryStack
    # locals

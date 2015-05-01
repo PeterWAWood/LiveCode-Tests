@@ -1,4 +1,4 @@
-script "ChunkingTests"
+﻿script "ChunkingTests"
 
 ## Helper Commands
 command testWholeChunk pInitVal, pChunk, pNewVal
