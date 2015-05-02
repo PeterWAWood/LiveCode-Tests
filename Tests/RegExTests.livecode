@@ -45,6 +45,12 @@ on libraryStack
   MT.startTest "Regex9"
   MT.assert matchText("e", "(?i)E")
   MT.endTest
+  
+  MT.startTest "Regex10"
+  # characters above the BMP
+  MT.assert matchText("𝄢", "𝄢")
+  MT.endTest
+
   MT.endTestFile
    
 end libraryStack
