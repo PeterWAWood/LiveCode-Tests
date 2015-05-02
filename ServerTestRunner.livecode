@@ -9,6 +9,9 @@ end if
 start using stack "../LiveCode-MiniTest/MiniTest.livecode"
 
 MT.startTestRun
+start using stack "Tests/TheUnicodeOutOfTheBoxTests.livecode"
+stop using stack "TheUnicodeOutOFTheBoxTests"
+delete stack "TheUnicodeOutOFTheBoxTests"
 start using stack "Tests/UnicodeTests.livecode"
 stop using stack "UnicodeTests"
 delete stack "UnicodeTests"
