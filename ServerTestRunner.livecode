@@ -7,21 +7,8 @@ if the platform is "MacOS" then
 end if
 
 start using stack "../LiveCode-MiniTest/MiniTest.livecode"
-
-MT.startTestRun
-start using stack "Tests/TheUnicodeOutOfTheBoxTests.livecode"
-stop using stack "TheUnicodeOutOFTheBoxTests"
-delete stack "TheUnicodeOutOFTheBoxTests"
-start using stack "Tests/UnicodeTests.livecode"
-stop using stack "UnicodeTests"
-delete stack "UnicodeTests"
-start using stack "Tests/ChunkingTests.livecode"
-stop using stack "ChunkingTests"
-delete stack "ChunkingTests"
-start using stack "Tests/RegExTests.livecode"
-stop using stack "RegExTests"
-delete stack "RegExTests"
-MT.endTestRun
-
+start using stack "Tests/AllTests.livecode"
+stop using stack "AllTests"
+delete stack "AllTests"
 stop using stack "MiniTest"
 delete stack "MiniTest"
