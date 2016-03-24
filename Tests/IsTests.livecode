@@ -1,6 +1,7 @@
 ﻿script "IsTests"
 
 on libraryStack
+  local tTemp
      
   MT.startTestFile "Is Tests"
    
@@ -26,8 +27,13 @@ on libraryStack
     MT.assert tArray is an array
   MT.endTest
   
-  MT.startTest "Is5"
+  MT.startTest "Is6"
     MT.refute numToCodepoint(128) is an ASCII string
+  MT.endTest
+  
+  MT.startTest "Is Really 1"
+    put "0" + 0 into tTemp
+    MT.refute tTemp is strictly an integer
   MT.endTest
   
   MT.endTestFile
